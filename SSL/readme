@@ -1,0 +1,3 @@
+In order to find the graph representation via self supervised learning there are few steps:
+1. Calculate the all augmentations type for all the datasets (calculate_all_augmentations)
+2. train the model with the augmentations

@@ -1,0 +1,6 @@
+The toy model is a graph dataset with 2 classes of graphs. The difference between the graphs is in their structure.
+There is the same number of vertices in each graph.
+We assume that each graph contains 2 communities of vertices. There are 3 factors that determine the structure of the graph: 
+1. The ratio between the number of vertices in each community (graph_type="group_size")
+2. The ratio between the number of edges inside each community and the number of edges between the communities (graph_type="alpha")
+3. The ratio between the density of each community (graph_type="density")

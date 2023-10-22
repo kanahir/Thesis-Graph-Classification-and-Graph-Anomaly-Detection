@@ -1,0 +1,6 @@
+,Dataset,Accuracy_Train,Accuracy_Test,Attribute_Type,Rep_Type,Matrix_Type,attributesOrLaplacian,Accuracy_Validation
+0,BZR,1.000,,topological_attributes,attributes_mean,laplacian,both,0.862
+1,BZR,1.000,,topological_attributes,attributes_mean,laplacian,both,0.831
+2,BZR,1.000,,topological_attributes,attributes_mean,laplacian,both,0.877
+3,BZR,1.000,,topological_attributes,attributes_mean,laplacian,both,0.785
+4,BZR,1.000,,topological_attributes,attributes_mean,laplacian,both,0.812

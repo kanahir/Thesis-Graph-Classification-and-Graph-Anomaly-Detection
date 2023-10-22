@@ -1,0 +1,21 @@
+The graph is represented by 2 methods:
+
+1. Graph structure ("matrix_type"): a representation based on adjacency matrix, laplacian matrix, ar normalized laplacian matrix.
+2. Attribute matrix: a representation based on node attributes.
+
+For attributes matrix there are 2 factors:
+1. The embedding method ("rep_type"): mean, or eigenvalues and moments (on the padded attributes matrix or by SVD algorithm).
+2. The attributes we use ("attributes_type"): the original attributes, the topological attributes or both.
+
+We want to find the best combination of the above factors that will give us the best results.
+
+Here is an explanation on important functions in the code:
+
+represent: calculate a graph representation based on the parameters. The main function is get_eigenvectors_moments that return a tuple of the eigenvalues and eigenvectors moments.
+get_representation: load a graph representation or calculate and save it if it doesn't exist.
+
+The steps are:
+1. Calculate the graph structure representation ("calc_and_save_embedding_graph_structure")
+2. Calculate the attributes representation ("calc_and_save_attributes_embedding")
+3. Define the parameters for the grid search
+4. Test the results by the function train_and_test

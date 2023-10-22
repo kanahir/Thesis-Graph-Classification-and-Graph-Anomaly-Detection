@@ -1,0 +1,28 @@
+There are 2 types of datasets in this project:
+Graph Classification datasets - from the TU Dortmund University
+Anomaly Detection datasets - enron, reality mining, sec_repo and twitter_security. There are in TPGAD_DATASETS directory
+
+The raw datatsets are not in pickle format.
+In order to use them, you need to convert them to pickle format first.
+For TU Dortmund datasets, the file that convert them is TUDataset_to_networkx.py
+For Anomaly Detection datasets, the file that convert them is AnomalyDetectionDataset_to_networkx.py
+
+After converting, the pickle file contains a dictionary with 2 fields:
+1. 'graphs' - a list of the graphs in the dataset, in networkx format
+2. 'labels' - a list of the labels of the graphs in the dataset
+
+The datasets will be in directory named 'pickle_datasets'.
+
+data_functions.py is a file that contains functions that help to work with the pickle datasets, such as:
+split_datasets: split the dataset into train and test sets
+get_data: load the split dataset from the directory
+graph_to_input:  get a networkx graph and return it as format as model input (on torch geometric)
+change_attributes: change the attributes of the nodes in the graph
+add_topological_features: calculate topological features of all vertices in the graph and concatenate them to the current attributes of the vertices
+replace_attributes_to_attributes_norm: normalize the attributes of the vertices in the graph after calculating the topological features
+
+The data process is:
+1. Convert the raw dataset to pickle format
+2. Calculate the topological features of the vertices in the graphs
+3. Normalize the attributes of the vertices in the graphs
+4. Split the dataset to train and test sets
